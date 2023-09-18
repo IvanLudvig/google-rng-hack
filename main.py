@@ -47,11 +47,11 @@ for point in points:
 
     lower = from_double(normalize(point))
     upper = from_double(normalize(point + 1))
-    upper_expr = (upper >> 52) & 0x7FF
+    upper_exp = (upper >> 52) & 0x7FF
     lower = lower & 0x000FFFFFFFFFFFFF
     upper = upper & 0x000FFFFFFFFFFFFF
 
-    solver.add(z3.And(lower <= calc, z3.Or(calc <= upper, upper_expr == 1024)))
+    solver.add(z3.And(lower <= calc, z3.Or(calc <= upper, upper_exp == 1024)))
 
 
 if solver.check() == z3.sat:
