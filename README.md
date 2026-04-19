@@ -1,3 +1,5 @@
 # Hacking Google Random Number Generator
 
-Blog post: https://ivanludvig.github.io/tech/google-random
+Blog posts:  
+- Part 1: https://ivanludvig.dev/tech/google-random  
+- Part 2: https://ivanludvig.dev/tech/google-random-v2
